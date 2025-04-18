@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: sandybrown;
+}
+
+.enlaces{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+
+}
+/* Menú hamburguesa */
+
+.contenmenu-desplegable-web {
+    display: none;
+}
+
+.menu-desplegable-web {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #004576;
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.menu-desplegable-web.activo {
+    max-height: 300px;
+}
+
+.menu-desplegable-web ul li a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #358BC9;
+}
+
+.menu-desplegable-web ul li:first-child a {
+    border-top: 1px solid #358BC9;
+}
+
+.menu-desplegable-web ul li a:hover {
+    background-color: #358BC9;
+}
+
+
+@media (max-width: 768px) {
+
+    .user, .ola_azul{
+        display: none;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .menu-hamburguesa-web, .contenedor-desplegable {
+        display: flex;
+    }
+
+}
+
