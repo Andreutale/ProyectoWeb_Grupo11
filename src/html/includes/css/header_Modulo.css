@@ -39,7 +39,7 @@ header > a > img {
     top: 100%;
     right: 0;
     z-index: -1;
-    width: 400px;
+    width: 150px;
     height: auto;
     max-width: 100%;
 }
