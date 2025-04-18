@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* esto empuja el footer hacia abajo */
+}
+
 /* -------------------------------------------- */
 /* Libro de estilo para el módulo Y la web */
 /* -------------------------------------------- */
