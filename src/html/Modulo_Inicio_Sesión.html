@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="includes/css/header_Modulo.css">
     <link rel="stylesheet" href="includes/css/modulo_Footer.css">
 
-    <script src="includes/js/header-Modulo.js" defer></script>
+
 </head>
 <body>
 
@@ -22,16 +22,16 @@
     <!-- Formulario directamente en main -->
     <div class="apartado_inicio_sesion">
         <h1>Inicio de sesión</h1>
-        <form action="#">
+        <form id="loginForm" action="#">
             <p>Correo</p>
-            <input type="email" id="email" name="email" placeholder="carlosgarcia@correo.com">
+            <input type="email" id="loginCorreo" name="email" placeholder="carlosgarcia@correo.com">
             <p>Contraseña</p>
-            <input type="password" id="password" name="password" placeholder="*******">
-            <a href="#"> <p>He olvidado mi contraseña</p> </a>
+            <input type="password" id="loginPassword" name="password" placeholder="*******">
+            <a class="enlace" href="#"> <p>He olvidado mi contraseña</p> </a>
             <div class="contenido-centrado-form">
-                <a href="#"> <button class="btn-azul-oscuro">Acceder</button> </a>
-                <p class="error">Error</p>
-                <a href="#"> <p>¿No tienes cuenta? Regístrate</p> </a>
+                <button type="submit" class="btn-azul-oscuro">Acceder</button>
+                <p id="mensaje" class="error">Error</p>
+                <a class="enlace" href="#"> <p>¿No tienes cuenta? Regístrate</p> </a>
             </div>
         </form>
     </div>
@@ -47,13 +47,16 @@
 <div id="footer"></div>
 
 <script type="module">
+    // Primero importamos las funciones y datos necesarios
     import { iniciarMenuHamburguesa } from './includes/js/header-Modulo.js';
+    import { usuarios } from '../app/usuarios.js';
 
+    // Cargamos el HTML del header y footer
     fetch("includes/header_Modulo.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
-            iniciarMenuHamburguesa(); // aquí debe ir
+            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
         });
 
     fetch("includes/modulo_footer_con_ola.html")
@@ -61,7 +64,11 @@
         .then(html => {
             document.getElementById("footer").innerHTML = html;
         });
+
+    // Si necesitas acceder a los usuarios en algún momento, ya puedes hacerlo
+    console.log("Usuarios cargados:", usuarios);
 </script>
+
 
 
 </body>
