@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión | Módulo</title>
+
+    <link rel="stylesheet" href="includes/css/libro_de_estilos.css">
+    <link rel="stylesheet" href="../css/Modulo_Inicio_Sesión.css">
+    <link rel="stylesheet" href="includes/css/header_Modulo.css">
+    <link rel="stylesheet" href="includes/css/modulo_Footer.css">
+
+    <script src="includes/js/header-Modulo.js" defer></script>
+</head>
+<body>
+
+<!-- Apartado del header -->
+<div id="header"></div>
+
+<!-- Contenido de la página -->
+<main>
+    <!-- Formulario directamente en main -->
+    <div class="apartado_inicio_sesion">
+        <h1>Inicio de sesión</h1>
+        <form action="#">
+            <p>Correo</p>
+            <input type="email" id="email" name="email" placeholder="carlosgarcia@correo.com">
+            <p>Contraseña</p>
+            <input type="password" id="password" name="password" placeholder="*******">
+            <a href="#"> <p>He olvidado mi contraseña</p> </a>
+            <div class="contenido-centrado-form">
+                <a href="#"> <button class="btn-azul-oscuro">Acceder</button> </a>
+                <p class="error">Error</p>
+                <a href="#"> <p>¿No tienes cuenta? Regístrate</p> </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="contenedor_imagen">
+        <img class="imagen_inicio_sesion" src="../../images/Inicio_Sesión_Modulo_Imagen.png" alt="Persona graduándose del hifi">
+    </div>
+</main>
+
+
+<!-- Apartado del footer -->
+<div id="footer"></div>
+
+<script type="module">
+    import { iniciarMenuHamburguesa } from './includes/js/header-Modulo.js';
+
+    fetch("includes/header_Modulo.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa(); // aquí debe ir
+        });
+
+    fetch("includes/modulo_footer_con_ola.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
+</script>
+
+
+</body>
+</html>
