@@ -1,22 +1,40 @@
+/* Estructura del header */
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
     background-color: sandybrown;
 }
 
-.enlaces{
+.logo {
+    height: 40px;
+}
+
+/* Enlaces visibles en desktop */
+.enlaces {
     display: flex;
     align-items: center;
     gap: 50px;
     justify-content: center;
-
 }
-/* Menú hamburguesa */
 
-.contenmenu-desplegable-web {
+/* Menú hamburguesa (oculto por defecto en desktop) */
+.menu-hamburguesa-web {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
+.linea {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+}
+
+/* Menú desplegable oculto por defecto */
 .menu-desplegable-web {
     position: absolute;
     top: 100%;
@@ -27,10 +45,17 @@ header {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.8s ease-in-out;
+    z-index: 999;
 }
 
 .menu-desplegable-web.activo {
     max-height: 300px;
+}
+
+.menu-desplegable-web ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-desplegable-web ul li a {
@@ -49,20 +74,17 @@ header {
     background-color: #358BC9;
 }
 
-
+/* Estilos responsive */
 @media (max-width: 768px) {
-
-    .user, .ola_azul{
+    .enlaces {
         display: none;
     }
 
-    .logo {
-        height: 30px;
-    }
-
-    .menu-hamburguesa-web, .contenedor-desplegable {
+    .menu-hamburguesa-web {
         display: flex;
     }
 
+    .menu-desplegable-web {
+        display: flex;
+    }
 }
-
