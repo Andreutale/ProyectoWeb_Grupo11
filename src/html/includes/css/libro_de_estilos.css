@@ -18,11 +18,7 @@ body {
 }
 
 main {
-<<<<<<< HEAD
-    flex: 1; /* esto empuja el footer hacia abajo */
-=======
     flex: 1;
->>>>>>> libro_de_estilos
 }
 
 /* -------------------------------------------- */
