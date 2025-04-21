@@ -7,6 +7,23 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+>>>>>>> main
 /* -------------------------------------------- */
 /* Libro de estilo para el módulo Y la web */
 /* -------------------------------------------- */
