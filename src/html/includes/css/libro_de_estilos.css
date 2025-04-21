@@ -1,7 +1,24 @@
+/* Incluir tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* -------------------------------------------- */
@@ -25,26 +42,23 @@
     --gris-oscuro: #3B3939;
 }
 
-
-/* Incluir tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
-
 /* Botones */
 
 .btn-azul-oscuro {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     border: 0;
     border-radius: 10px;
     background-color: #004576;
     color: white;
+    cursor: pointer;
 }
 
 .btn-azul-claro {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     border: 0;
     border-radius: 10px;
     background-color: #9BD5FF;
@@ -54,7 +68,7 @@
 .btn-azul-verdoso {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     border: 0;
     border-radius: 10px;
     background-color: #225560;
@@ -64,7 +78,7 @@
 .btn-blanco-gris {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
     border: 0;
     border-radius: 10px;
     background-color: #E0E0E0;
@@ -88,13 +102,13 @@ h1 {
 h2 {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 h3 {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 p {
@@ -122,11 +136,11 @@ a {
 
 @media(max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     h3 {
