@@ -10,8 +10,8 @@ header {
 a > h3 {
     color: white;
 }
-a > img {
-    height: 45px;
+a > img{
+    height: 40px;
 }
 
 button{
@@ -84,7 +84,7 @@ button{
 }
 
 /* Estilos responsive */
-@media (max-width: 780px) {
+@media (max-width: 900px) {
     .enlaces {
         display: none;
     }
