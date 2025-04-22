@@ -1,0 +1,152 @@
+/* Incluir tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* -------------------------------------------- */
+/* Libro de estilo para el módulo Y la web */
+/* -------------------------------------------- */
+
+/* colores */
+
+:root {
+
+    /* Colores del módulo */
+    --blanco-1: #EBEBEB;
+    --azul-muy-claro:#C3D9E9;
+    --azul-claro: #9BD5FF;
+    --azul-oscuro: #358BC9;
+    --azul-muy-oscuro: #004576;
+
+    /* Colores de la web */
+    --azul-verdoso: #225560;
+    --gris-claro: #D9D9D9;
+    --gris-oscuro: #3B3939;
+}
+
+/* Botones */
+
+.btn-azul-oscuro {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #004576;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-azul-claro {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #9BD5FF;
+    color: black;
+}
+
+.btn-azul-verdoso {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #225560;
+    color: white;
+}
+
+.btn-blanco-gris {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+    color: #225560;
+}
+
+
+.boton {
+    height: 100px;
+    width: 200px;
+}
+
+/* Tipografía escritorio */
+
+h1 {
+    font-family: "Assistant", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+h2 {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: "Assistant", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+p {
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer > p {
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+
+/* Tipografía móvil */
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+
