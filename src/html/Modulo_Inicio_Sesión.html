@@ -52,14 +52,14 @@
     import { usuarios } from '../app/usuarios.js';
 
     // Cargamos el HTML del header y footer
-    fetch("includes/header_Modulo.html")
+    fetch("modulo/Modulo_header.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
             iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
         });
 
-    fetch("includes/modulo_footer_con_ola.html")
+    fetch("modulo/Modulo_footer_con_ola.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("footer").innerHTML = html;
@@ -68,7 +68,6 @@
     // Si necesitas acceder a los usuarios en algún momento, ya puedes hacerlo
     console.log("Usuarios cargados:", usuarios);
 </script>
-
 
 
 </body>
