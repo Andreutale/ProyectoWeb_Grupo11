@@ -58,14 +58,15 @@ form div a {
     cursor: pointer;
 }
 
+
 .error {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 14px;
+    min-height: 1.5em; /* o height: 1.5em si quieres que siempre tenga la misma altura */
     color: red;
+    visibility: hidden;
     text-align: center;
-    display: none; /* Inicialmente oculto */
+    margin-top: 10px;
 }
+
 
 .contenido-centrado-form {
     display: flex;
