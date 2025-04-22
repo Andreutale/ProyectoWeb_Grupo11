@@ -1,11 +1,12 @@
 /* Estructura del header */
 header {
-    height: 60px;
+    height: 70px;
     background-color: var(--azul-verdoso);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+    position: relative;
 }
 a > h3 {
     color: white;
@@ -40,7 +41,8 @@ button{
 .linea {
     width: 30px;
     height: 4px;
-    background-color: black;
+    background-color: white;
+    border-radius: 2px;
 }
 
 /* Menú desplegable oculto por defecto */
@@ -48,7 +50,7 @@ button{
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #004576;
+    background-color: var(--azul-verdoso);
     width: 100%;
     flex-direction: column;
     max-height: 0;
@@ -72,15 +74,16 @@ button{
     padding: 20px;
     color: white;
     text-decoration: none;
-    border-bottom: 1px solid #358BC9;
+    border-bottom: 1px solid var(--blanco-1);
 }
 
 .menu-desplegable-web ul li:first-child a {
-    border-top: 1px solid #358BC9;
+    border-top: 1px solid var(--blanco-1);
 }
 
 .menu-desplegable-web ul li a:hover {
-    background-color: #358BC9;
+    background-color: var(--blanco-1);
+    color: black;
 }
 
 /* Estilos responsive */
