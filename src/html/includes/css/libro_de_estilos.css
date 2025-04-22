@@ -18,12 +18,14 @@ body {
 }
 
 main {
-    flex: 1; /* esto empuja el footer hacia abajo */
+    flex: 1;
 }
 
+>>>>>>> main
 /* -------------------------------------------- */
 /* Libro de estilo para el módulo Y la web */
 /* -------------------------------------------- */
+
 
 /* colores */
 
@@ -102,13 +104,13 @@ h1 {
 h2 {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 h3 {
     font-family: "Assistant", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 p {
@@ -136,11 +138,11 @@ a {
 
 @media(max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     h3 {
