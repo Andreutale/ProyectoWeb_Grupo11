@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión | Módulo</title>
 
-    <link rel="stylesheet" href="css/libro_de_estilos.css">
+    <link rel="stylesheet" href="../css/libro_de_estilos.css">
     <link rel="stylesheet" href="../css/Modulo_Inicio_Sesión.css">
-    <link rel="stylesheet" href="css/Modulo_header.css">
-    <link rel="stylesheet" href="css/Modulo_footer.css">
+    <link rel="stylesheet" href="../css/Modulo_header.css">
+    <link rel="stylesheet" href="../css/Modulo_footer.css">
 
+    <script type="module" src="../js/Modulo_Inicio_Sesion.js" defer></script>
 
 </head>
 <body>
@@ -38,7 +39,7 @@
 
     <!-- Imagen a la derecha -->
     <div class="contenedor_imagen">
-        <img class="imagen_inicio_sesion" src="../../images/Inicio_Sesión_Modulo_Imagen.png" alt="Persona graduándose del hifi">
+        <img class="imagen_inicio_sesion" src="../../../images/Inicio_Sesión_Modulo_Imagen.png" alt="Persona graduándose del hifi">
     </div>
 </main>
 
@@ -48,18 +49,18 @@
 
 <script type="module">
     // Primero importamos las funciones y datos necesarios
-    import { iniciarMenuHamburguesa } from './js/Modulo_header.js';
-    import { usuarios } from '../app/usuarios.js';
+    import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
+    import { usuarios } from '../../app/usuarios.js';
 
     // Cargamos el HTML del header y footer
-    fetch("modulo/Modulo_header.html")
+    fetch("Modulo_header.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
             iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
         });
 
-    fetch("modulo/Modulo_footer_con_ola.html")
+    fetch("Modulo_footer_con_ola.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("footer").innerHTML = html;
