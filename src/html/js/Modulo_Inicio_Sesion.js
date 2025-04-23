@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Buscar usuario con coincidencia exacta en correo y contraseña
         const usuario = usuarios.find(u => u.correo === correo && u.contraseña === password);
 
-        if (!usuario) {
+        if (!usuario || !usuario.rol) {
             mensaje.style.visibility = "visible";
             mensaje.textContent = "Datos incorrectos.";
             return;
