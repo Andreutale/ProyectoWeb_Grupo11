@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/Web_footer.css">
     <link rel="stylesheet" href="../css/Web_registro.css">
 
-    <script src="../js/Modulo_header.js" defer></script>
+    <script type="module" src="../js/Web_registro.js" defer></script>
 </head>
 <body>
 
@@ -22,6 +22,31 @@
     <img class="img_persona" src="../../../images/persona_registro_web.png" alt="Imagen de la persona que aparece en el high fidelity
         de registro">
 
+    <div class="contenedor_registro">
+        <h1>Registro</h1>
+        <div class="contenedor_div_formulario">
+            <div class="contenedor_1_formulario">
+                <p>Nombre *</p>
+                <input id="nombre" type="text" placeholder="Carlos">
+                <p>Correo *</p>
+                <input id="correo" type="email" placeholder="carlosgarcia@gmail.com">
+                <p>Contraseña *</p>
+                <input id="contraseña" type="password" placeholder="*********">
+            </div>
+            <div class="contenedor_2_formulario">
+                <p>Apellidos *</p>
+                <input id="apellidos" type="text" placeholder="García">
+                <p>Teléfono *</p>
+                <input id="telefono" type="text" placeholder="987 654 321">
+                <p>Confirmar contraseña *</p>
+                <input id="confirmarContraseña" type="password" placeholder="*********">
+            </div>
+        </div>
+        <button class="btn-azul-verdoso">Regístrate</button>
+        <a href="#"><p>¿Ya tienes cuenta? <span class="parrafo_verde">Inicia Sesión</span></p></a>
+
+    </div>
+
     
 </main>
 
@@ -30,13 +55,15 @@
 
 <script type="module">
     // Primero importamos las funciones y datos necesarios
-    import { usuarios } from '../../app/usuarios.js';
+    import { iniciarMenuHamburguesa } from "../js/Modulo_header.js";
+    import { usuariosWeb } from '../../app/usuariosWeb.js';
 
     // Cargamos el HTML del header y footer
     fetch("Web_header_no_registrado.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa();
         });
 
     fetch("Web_footer.html")
@@ -46,7 +73,7 @@
         });
 
     // Si necesitas acceder a los usuarios en algún momento, ya puedes hacerlo
-    console.log("Usuarios cargados:", usuarios);
+    console.log("Usuarios cargados:", usuariosWeb);
 </script>
 
 </body>
