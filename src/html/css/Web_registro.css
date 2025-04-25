@@ -17,6 +17,7 @@
     transform: translate(-50%, -50%);
     border-radius: 20px;
     z-index: 1;
+    max-height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -84,6 +85,15 @@
 }
 
 @media (max-width: 940px) {
+    .contenedor_registro {
+        height: 85%;
+        max-height: 700px;
+    }
+
+    .contenedor_registro h1 {
+        margin-bottom: 20px;
+    }
+
     .contenedor_div_formulario {
         flex-direction: column;
         align-items: center;
@@ -95,11 +105,26 @@
     }
 
     .contenedor_registro button {
-        width: 60%;
+        width: 40%;
+    }
+
+    .contenedor_1_formulario input,
+    .contenedor_2_formulario input {
+        height: 30px;
+        margin-bottom: 15px;
     }
 
     .img_persona {
-        display: none;
+        height: 40%;
+        width: 30%;
+        right: 40px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .img_persona {
+        width: 25%;
+        height: 55%;
     }
 }
 

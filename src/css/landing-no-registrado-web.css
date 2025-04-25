@@ -1,7 +1,6 @@
-
 .img_persona {
-    height: 70%;
-    width: 27%;
+    height: 75%;
+    width: 40%;
     top: 100px;
     right: 0;
 }
@@ -9,6 +8,24 @@
 .img_persona_invertida {
     display: none;
 }
+
+
+
+p{
+    font-size: 42px;
+}
+.landing-texto {
+    position: absolute;
+    top: 20%; /* Ajusta según donde quieras el texto */
+    left: 25%;
+
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
 
 @media(max-width: 940px) {
     .img_persona {
