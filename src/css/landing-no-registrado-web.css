@@ -9,21 +9,37 @@
     display: none;
 }
 
-
-
-p{
-    font-size: 42px;
-}
 .landing-texto {
     position: absolute;
-    top: 20%; /* Ajusta según donde quieras el texto */
-    left: 25%;
+    height: 50%;
+    width: 40%;
+    top: 20%;
+    left: 10%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.landing-texto p {
+    color: black;
     text-align: center;
-    color: white;
     font-size: 42px;
-    font-weight: bold;
-    padding: 1rem;
+    margin-bottom: 55px;
+}
+
+.texto-pequeño {
+    font-size: 32px;
+}
+
+.btn-azul-verdoso {
+    position: relative;
+    font-size: 28px;
+    font-weight: 600;
+    height: 70px;
+    width: 300px;
+    cursor: pointer;
 }
 
 
@@ -40,5 +56,13 @@ p{
         width: 20%;
         bottom: 100px;
         left: 0;
+    }
+
+    .landing-texto {
+        left: 30%;
+    }
+
+    .texto-pequeño {
+        width: 100%;
     }
 }
