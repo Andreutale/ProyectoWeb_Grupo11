@@ -1,6 +1,6 @@
 .img_persona {
     height: 75%;
-    width: 40%;
+    width: 35%;
     top: 100px;
     right: 0;
 }
@@ -47,20 +47,51 @@
     .img_persona {
         display: none;
     }
+    .landing-texto {
+        position: absolute;
+        top: 15%; /* Subimos un poco */
+        left: 5%; /* Pegado a la izquierda */
+        width: 90%; /* Más ancho para aprovechar el espacio */
+        height: auto;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinear arriba */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .landing-texto p {
+        color: black;
+        text-align: left; /* Texto alineado a la izquierda */
+        font-size: 28px; /* Más pequeño pero legible */
+        margin-bottom: 40px; /* Menos separación */
+    }
+
+    .texto-pequeño {
+        font-size: 24px; /* también más chico */
+    }
+
+    .btn-azul-verdoso {
+        align-self: center;
+        width: 100%;
+        max-width: 250px;
+        height: 60px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .landing-texto a{
+        align-self: center;
+    }
     .img_persona_invertida {
         display: flex;
 
         position: absolute;
         height: 40%;
-        width: 20%;
-        bottom: 100px;
+        width: 50%;
+        bottom: 50px;
         left: 0;
     }
 
-    .landing-texto {
-        left: 30%;
-    }
 
     .texto-pequeño {
         width: 100%;
