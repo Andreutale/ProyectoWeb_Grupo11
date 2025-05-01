@@ -71,6 +71,7 @@ main {
     border-radius: 10px;
     background-color: #9BD5FF;
     color: black;
+    cursor: pointer;
 }
 
 .btn-azul-verdoso {
@@ -81,6 +82,7 @@ main {
     border-radius: 10px;
     background-color: #225560;
     color: white;
+    cursor: pointer;
 }
 
 .btn-blanco-gris {
@@ -91,6 +93,7 @@ main {
     border-radius: 10px;
     background-color: #E0E0E0;
     color: #225560;
+    cursor: pointer;
 }
 
 
