@@ -27,6 +27,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .contenedor_1_formulario,
@@ -37,8 +40,11 @@
     align-items: center;
 }
 
-.contenedor_1_formulario p,
-.contenedor_2_formulario p {
+.contenedor_1_formulario label,
+.contenedor_2_formulario label {
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     color: black;
     align-self: flex-start;
     margin-left: 10%;
@@ -92,15 +98,15 @@
         margin-bottom: 40px;
     }
 
-    .contenedor_div_formulario div p {
+    .contenedor_div_formulario li label {
         margin-bottom: 2px;
     }
 
-    .contenedor_div_formulario div input {
+    .contenedor_div_formulario li input {
         margin-bottom: 20px;
     }
 
-    .contenedor_div_formulario div input:last-child {
+    .contenedor_div_formulario li input:last-child {
         margin-bottom: 35px;
     }
 
