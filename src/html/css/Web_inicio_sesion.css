@@ -46,13 +46,17 @@
 .btn-azul-verdoso {
     width: 30%;
     height: 10%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
     position: relative;
 }
 
-.contenido-final {
-    display: flex;
+.contenido_final {
+    width: 70%;
+}
+
+.contenido_final a {
+    text-align: center;
 }
 
 .contenedor_inicio_sesion a p {
@@ -69,6 +73,7 @@
 
 .mensaje-error {
     color: red;
-    position: absolute;
-    z-index: 9382938;
+    text-align: center;
+    margin-bottom: 20px;
+    visibility: hidden;
 }

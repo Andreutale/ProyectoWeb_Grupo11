@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/Web_header_no_registrado.css">
     <link rel="stylesheet" href="../css/Web_footer.css">
     <link rel="stylesheet" href="../css/Web_inicio_sesion.css">
+
+    <script type="module" src="../js/Web_inicio_sesion.js" defer></script>
 </head>
 <body>
 
@@ -32,7 +34,7 @@
         </ul>
         <button class="btn-azul-verdoso">Acceder</button>
         <div class="contenido_final">
-            <p class="mensaje-error">Datos incorrectos</p>
+            <p id="mensaje-error" class="mensaje-error">Datos incorrectos</p>
             <a href="#"><p>¿No tienes cuenta? <span class="parrafo_verde">Regístrate</span></p></a>
         </div>
     </nav>
@@ -60,8 +62,6 @@
             document.getElementById("footer").innerHTML = html;
         });
 
-    // Si necesitas acceder a los usuarios en algún momento, ya puedes hacerlo
-    console.log("Usuarios cargados:", usuariosWeb);
 </script>
 
 </body>
