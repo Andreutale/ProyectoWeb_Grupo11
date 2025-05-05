@@ -1,6 +1,14 @@
+.img_persona {
+    height: 45%;
+    width: auto;
+    bottom: 0;
+    right: 170px;
+}
+
 .contenedor_inicio_sesion {
-    height: 80%;
+    height: auto;
     width: 40%;
+    padding: 10px;
     background-color: white;
     border: 1px solid var(--gris-oscuro);
     border-radius: 10px;
@@ -76,4 +84,58 @@
     text-align: center;
     margin-bottom: 20px;
     visibility: hidden;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenedor_inicio_sesion {
+        height: 60%;
+
+    }
+
+    .contenedor_div_formulario li label {
+        margin-bottom: 2px;
+    }
+
+    .contenedor_div_formulario li input {
+        margin-bottom: 20px;
+    }
+
+    .contenedor_div_formulario li input:last-child {
+        margin-bottom: 35px;
+    }
+
+    .btn-azul-verdoso {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 940px) {
+    .img_persona {
+    }
+}
+
+@media(max-width: 1400px) {
+    .img_persona {
+        right: 100px;
+        height: 35%;
+    }
+
+    .contenedor_inicio_sesion {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .img_persona {
+        height: 30%;
+    }
 }
