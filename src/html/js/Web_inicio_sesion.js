@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Si usuario válido, redirige después de 1 segundo
-            mensajeError.style.visibility = "hidden";
+            mensajeError.style.color = "green"
+            mensajeError.style.visibility = "visible"
+            mensajeError.textContent = "Usuario correcto"
             console.log("Acceso correcto:", usuarioValido);
 
             setTimeout(() => {
