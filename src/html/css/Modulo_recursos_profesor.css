@@ -1,0 +1,30 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-azul-claro{
+    height: 50px;
+    width: 50px;
+
+}
+.contenedor_ruta{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.contenedor_ruta_boton{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.filtros_recursos{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style:none;
+
+}
