@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/libro_de_estilos.css">
+    <link rel="stylesheet" href="../css/Modulo_header.css">
+    <link rel="stylesheet" href="../css/Modulo_footer.css">
+    <link rel="stylesheet" href="../css/Modulo_asignaturas.css">
+
+    <title>Asignaturas | Modulo</title>
+</head>
+<body>
+
+
+<div id="header"></div>
+
+<main>
+    <!--Nombre de la asignatura-->
+    <h2 id="nombre_asignatura">Programación 2</h2>
+
+    <!--Subtitulo de la pagina-->
+    <h3>Elije a que apartado quieres acceder</h3>
+
+    <!--Lista de apartados-->
+    <ul>
+        <li><a href="#"><img src="" alt="Guía Docente"><p>Guía Docente</p></a></li>
+        <li><a href="#"><img src="" alt="Recursos"><p>Recursos</p></a></li>
+        <li><a href="#"><img src="" alt="Tareas"><p>Tareas</p></a></li>
+    </ul>
+    <ul>
+        <li><a href="#"><img src="" alt="Exámenes"><p>Exámenes</p></a></li>
+        <li><a href="#"><img src="" alt="Calificaciones"><p>Calificaciones</p></a></li>
+        <li><a href="#"><img src="" alt="Anuncios"><p>Anuncios</p></a></li>
+    </ul>
+
+</main>
+
+<div id="footer"></div>
+
+
+<script type="module">
+    // Primero importamos las funciones y datos necesarios
+    import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
+
+
+    // Cargamos el HTML del header y footer
+    fetch("Modulo_header.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
+        });
+
+    fetch("Modulo_footer_con_ola.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
+
+
+</script>
+</body>
+</html>
