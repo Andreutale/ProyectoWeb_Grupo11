@@ -1,7 +1,20 @@
 main{
+
+    display: flex;
+    width: 100%;
+    gap: 50px;
+
+}
+.asignaturas{
+    display: flex;
+    width: 12%;
+    height: auto;
+    background-color: var(--azul-claro);
+    border-right: 2px solid var(--azul-oscuro);
+}
+.contenedor_pagina{
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .btn-azul-claro{
@@ -26,5 +39,13 @@ main{
     flex-direction: row;
     gap: 100px;
     list-style:none;
+    left: 15%;
 
+}
+
+.recurso{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style:none;
 }
