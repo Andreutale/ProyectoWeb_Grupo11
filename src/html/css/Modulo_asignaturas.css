@@ -1,0 +1,37 @@
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gris-claro);
+    z-index: -2;
+}
+
+main ul{
+    display: flex;
+
+}
+h2{
+    margin: 10px 0;
+    font-weight: bold;
+}
+h3{
+    margin: 20px 0;
+
+}
+
+main ul li{
+    width: 115px;
+    height: 115px;
+    background-color: var(--azul-claro);
+    margin: 20px 50px;
+    list-style: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+
+}
+p{
+    margin-top: 10px;
+    text-align: center;
+}
