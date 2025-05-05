@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../css/libro_de_estilos.css">
     <link rel="stylesheet" href="../css/Modulo_recursos_profesor.css">
-    <link rel="stylesheet" href="../css/Modulo_header.css">
+    <link rel="stylesheet" href="../css/Modulo_header_asignaturas.css">
     <link rel="stylesheet" href="../css/Modulo_footer.css">
 
 </head>
@@ -17,33 +17,52 @@
 <div id="header"></div>
 
 <!-- Contenido de la página -->
-<main>
-    <!-- Formulario directamente en main -->
-    <div class="apartado_inicio_sesion">
-        <h1>Inicio de sesión</h1>
-        <form id="loginForm" action="#">
-            <p>Correo</p>
-            <input type="email" id="loginCorreo" name="email" placeholder="carlosgarcia@correo.com">
-            <p>Contraseña</p>
-            <input type="password" id="loginPassword" name="password" placeholder="*******">
-            <a class="enlace" href="#"> <p>He olvidado mi contraseña</p> </a>
-            <div class="contenido-centrado-form">
-                <button type="submit" class="btn-azul-oscuro">Acceder</button>
-                <p id="mensaje" class="error">Error</p>
-                <a class="enlace" href="#"> <p>¿No tienes cuenta? Regístrate</p> </a>
-            </div>
-        </form>
-    </div>
+<h2 id="recursos">Recursos:</h2>
+<h3 id="ruta">Ruta:</h3>
 
-    <!-- Imagen a la derecha -->
-    <div class="contenedor_imagen">
-        <img class="imagen_inicio_sesion" src="../../../images/Inicio_Sesión_Modulo_Imagen.png" alt="Persona graduándose del hifi">
-    </div>
-</main>
+<ul class="filtros_recursos">
+    <li>Nombre</li>
+    <li>Autor</li>
+    <li>Fecha de publicacíon</li>
+    <li>Tipo de archivo</li>
+</ul>
+
+<ul>
+    <li><img src="" alt=""></li>
+    <li>Documentacion_js</li>
+    <li>Lucio</li>
+    <li>21/08/22</li>
+    <li>Carpeta</li>
+    <li><img src="" alt=""><button> </button></li>
+    <li><img src="" alt=""><button> </button></li>
+    <li><img src="" alt=""><button> </button></li>
+</ul>
 
 
 <!-- Apartado del footer -->
 <div id="footer"></div>
 
+
+<script type="module">
+    // Primero importamos las funciones y datos necesarios
+    import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
+
+
+    // Cargamos el HTML del header y footer
+    fetch("Modulo_header_asignaturas.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
+        });
+
+    fetch("Modulo_footer.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
+
+
+</script>
 </body>
 </html>
