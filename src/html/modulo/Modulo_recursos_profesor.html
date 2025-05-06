@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../css/libro_de_estilos.css">
     <link rel="stylesheet" href="../css/Modulo_recursos_profesor.css">
-    <link rel="stylesheet" href="../css/Modulo_header.css">
+    <link rel="stylesheet" href="../css/Modulo_header_asignaturas.css">
     <link rel="stylesheet" href="../css/Modulo_footer.css">
 
 </head>
@@ -16,28 +16,89 @@
 <!-- Apartado del header -->
 <div id="header"></div>
 
-<!-- Contenido de la página -->
 <main>
-    <!-- Formulario directamente en main -->
-    <div class="apartado_inicio_sesion">
-        <h1>Inicio de sesión</h1>
-        <form id="loginForm" action="#">
-            <p>Correo</p>
-            <input type="email" id="loginCorreo" name="email" placeholder="carlosgarcia@correo.com">
-            <p>Contraseña</p>
-            <input type="password" id="loginPassword" name="password" placeholder="*******">
-            <a class="enlace" href="#"> <p>He olvidado mi contraseña</p> </a>
-            <div class="contenido-centrado-form">
-                <button type="submit" class="btn-azul-oscuro">Acceder</button>
-                <p id="mensaje" class="error">Error</p>
-                <a class="enlace" href="#"> <p>¿No tienes cuenta? Regístrate</p> </a>
-            </div>
-        </form>
-    </div>
+    <div class="asignaturas">
 
-    <!-- Imagen a la derecha -->
-    <div class="contenedor_imagen">
-        <img class="imagen_inicio_sesion" src="../../../images/Inicio_Sesión_Modulo_Imagen.png" alt="Persona graduándose del hifi">
+    </div>
+    <div class="contenedor_pagina">
+        <!-- Contenido de la página -->
+        <h2 id="recursos">Recursos:</h2>
+        <div class="contenedor_ruta">
+
+            <div class="contenedor_ruta_boton">
+                <h3>Ruta: <span id="cambio">Ejercicios-Ejemplos/JavaScript/</span></h3>
+
+                <button class="btn-azul-claro"> <img src="" alt=""> </button>
+            </div>
+
+
+            <button class="btn-azul-claro"> <img src="" alt=""> </button>
+        </div>
+
+
+        <table>
+            <tr>
+                <th>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+
+                </th>
+                <th>
+                    <a href="#"><h3>Nombre</h3><img src="" alt=""></a>
+                </th>
+                <th>
+                    <a href="#"><h3>Autor</h3><img src="" alt=""></a>
+                </th>
+                <th>
+                    <a href="#"><h3>Fecha de publicación</h3><img src="" alt=""></a>
+                </th>
+                <th>
+                    <a href="#"><h3>Tipo de archivo</h3><img src="" alt=""></a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+                <td><a href="#"><img src="" alt=""><h3>Documentación_JS</h3></a></td>
+                <td><h3>Lucio</h3></td>
+                <td><h3>21/08/22</h3></td>
+                <td><h3>Carpeta</h3></td>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+                <td><a href="#"><img src="" alt=""><h3>Ejemplo-Diseño.img</h3></a></td>
+                <td><h3>Lucio</h3></td>
+                <td><h3>21/08/22</h3></td>
+                <td><h3>Imagen</h3></td>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+                <td><a href="#"><img src="" alt=""><h3>Prueba.txt</h3></a></td>
+                <td><h3>Lucio</h3></td>
+                <td><h3>21/08/22</h3></td>
+                <td><h3>Documento de texto</h3></td>
+                <td>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                </td>
+            </tr>
+
+        </table>
     </div>
 </main>
 
@@ -45,5 +106,27 @@
 <!-- Apartado del footer -->
 <div id="footer"></div>
 
+
+<script type="module">
+    // Primero importamos las funciones y datos necesarios
+    import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
+
+
+    // Cargamos el HTML del header y footer
+    fetch("Modulo_header_asignaturas.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
+        });
+
+    fetch("Modulo_footer.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
+
+
+</script>
 </body>
 </html>
