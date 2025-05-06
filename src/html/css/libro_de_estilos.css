@@ -7,19 +7,11 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100vh;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: calc(100vh - 70px - 60px);
-    position: relative;
 }
 
 .fondo_landing {
@@ -27,10 +19,13 @@ main {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    z-index: -1;
 }
 
 .img_persona {
     position: absolute;
+    z-index: 2;
 }
 
 
@@ -76,6 +71,7 @@ main {
     border-radius: 10px;
     background-color: #9BD5FF;
     color: black;
+    cursor: pointer;
 }
 
 .btn-azul-verdoso {
@@ -86,6 +82,7 @@ main {
     border-radius: 10px;
     background-color: #225560;
     color: white;
+    cursor: pointer;
 }
 
 .btn-blanco-gris {
@@ -96,6 +93,7 @@ main {
     border-radius: 10px;
     background-color: #E0E0E0;
     color: #225560;
+    cursor: pointer;
 }
 
 
@@ -144,6 +142,13 @@ a {
     color: black;
 }
 
+input {
+    background-color: var(--blanco-1);
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
 
 /* Tipografía móvil */
 
@@ -160,5 +165,3 @@ a {
         font-size: 20px;
     }
 }
-
-
