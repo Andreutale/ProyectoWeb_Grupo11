@@ -59,13 +59,15 @@
         justify-content: center; /* Alinear arriba */
         align-items: center; /* Alinear a la izquierda */
 
+
     }
 
     .landing-texto p {
         color: black;
-        text-align: left; /* Texto alineado a la izquierda */
+
         font-size: 34px; /* Más pequeño pero legible */
         margin-bottom: 40px; /* Menos separación */
+        text-align: center;
     }
 
     .texto-pequeño {
@@ -123,7 +125,7 @@
 
     .landing-texto p {
         color: black;
-        text-align: left; /* Texto alineado a la izquierda */
+        text-align: center;
         font-size: 28px; /* Más pequeño pero legible */
         margin-bottom: 40px; /* Menos separación */
     }
