@@ -15,6 +15,14 @@ a > h3 {
 button{
     padding: 10px 18px;
 }
+.menos_marcado{
+    font-size: 20px;
+    background-color: var(--azul-verdoso);
+    color: var(--blanco-1);
+    border: var(--blanco-1) solid 1px;
+    border-radius: 10px;
+    padding: 10px 18px;
+}
 .logo {
     height: 40px;
 }
