@@ -1,12 +1,15 @@
 .img_persona {
-    height: 45%;
+    height: 40%;
+    max-height: 400px;
     width: auto;
-    bottom: 0;
+    bottom: 50px;
     right: 170px;
+    position: static;
 }
 
 .contenedor_inicio_sesion {
     height: auto;
+    max-height: 80%;
     width: 40%;
     padding: 10px;
     background-color: white;
@@ -69,6 +72,7 @@
 
 .contenedor_inicio_sesion a p {
     color: black;
+    padding-bottom: 10px;
 }
 
 .contenedor_inicio_sesion a:hover {
@@ -89,6 +93,27 @@
 
 
 
+@media(max-height: 760px) and (min-width: 1200px){
+    main {
+        background-color: yellow;
+    }
+}
+
+@media(max-height: 760px) {
+    main {
+        background-color: orange;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+
 @media (max-width: 768px) {
 
     main {
@@ -97,29 +122,21 @@
     }
 
     .contenedor_inicio_sesion {
-        height: 60%;
-
+        display: flex;
+        flex-direction: column;
     }
 
-    .contenedor_div_formulario li label {
-        margin-bottom: 2px;
-    }
-
-    .contenedor_div_formulario li input {
-        margin-bottom: 20px;
-    }
-
-    .contenedor_div_formulario li input:last-child {
-        margin-bottom: 35px;
+    .contenedor_inicio_sesion ul li:last-child {
+        margin: 40px 0;
     }
 
     .btn-azul-verdoso {
         margin-bottom: 5px;
     }
-}
 
-@media (max-width: 940px) {
     .img_persona {
+        position: initial;
+
     }
 }
 
@@ -135,7 +152,28 @@
 }
 
 @media (max-width: 1100px) {
+    .contenedor_inicio_sesion {
+        max-height: 60%;
+    }
+
     .img_persona {
         height: 30%;
+        right: 10px;
     }
 }
+
+@media(max-height: 750px) {
+    .contenedor_inicio_sesion h1 {
+        margin-bottom: 20px;
+    }
+
+    .contenedor_inicio_sesion ul li:last-child {
+        margin: 30px 0;
+    }
+
+    .btn-azul-verdoso {
+        margin-bottom: -20px;
+    }
+}
+
+*/
