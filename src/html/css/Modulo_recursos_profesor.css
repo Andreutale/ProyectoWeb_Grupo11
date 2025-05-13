@@ -1,24 +1,50 @@
 main{
-
     display: flex;
     width: 100%;
-    gap: 50px;
-
+    height: 100%;
 }
+
 .asignaturas{
     display: flex;
     width: 12%;
-    height: auto;
-    background-color: var(--azul-claro);
+    min-width: 200px;
+    height: 100%;
+    position: sticky;
+    background-color: var(--azul-muy-claro);
     border-right: 2px solid var(--azul-oscuro);
 }
-.contenedor_pagina{
+
+.contenedor_pagina {
     display: flex;
     flex-direction: column;
+    width: 60%;
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.opciones {
+    height: 50px;
+    width: 50px;
+    background-color: var(--azul-claro);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espacio vertical entre filas */
+    width: 100%;
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--azul-muy-claro);
 }
 
 .btn-azul-claro{
-    height: 50px;
+    height: 80%;
     width: 50px;
 
 }
