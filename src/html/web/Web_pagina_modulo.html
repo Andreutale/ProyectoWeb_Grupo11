@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Módulo | WEB</title>
+    <link rel="stylesheet" href="../css/libro_de_estilos.css">
+    <link rel="stylesheet" href="../css/Web_header_no_registrado.css">
+    <link rel="stylesheet" href="../css/Web_footer.css">
+    <link rel="stylesheet" href="../css/Web_pagina_modulo.css">
+</head>
+<body>
+
+<div id="header"></div>
+<main>
+    <h1>RECURSOS</h1>
+    <div class="contenedor_global">
+        <div class="contenedor_img">
+            fotillos
+        </div>
+        <div class="datos_demo">
+            <div class="credenciales">
+                <p class="usuario">Usuario 1</p>
+                <ul class="separador">
+                    <li><p class="dato">Correo:</p>
+                        <p>usuario1@proa.com</p>
+                    </li>
+                    <li><p class="dato">Contraseña:</p>
+                        <p>123456</p>
+                    </li>
+                </ul>
+                </br>
+                <p class="usuario">Usuario 2</p>
+                <ul>
+                    <li><p class="dato">Correo:</p>
+                        <p>usuario2@proa.com</p>
+                    </li>
+                    <li><p class="dato">Contraseña:</p>
+                        <p>123456</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="botones_datos">
+                <button class="btn-blanco-gris"><a href="#"><p>Demo</p></a></button>
+                <button class="btn-azul-verdoso"><a href="#"><p>Comprar</p></a></button>
+            </div>
+        </div>
+        <div class="descripcion">
+            bilibliblib
+        </div>
+    </div>
+</main>
+<div id="footer"></div>
+<script type="module">
+    // Primero importamos las funciones y datos necesarios
+    import { iniciarMenuHamburguesa } from "../js/Modulo_header.js";
+
+    // Cargamos el HTML del header y footer
+    fetch("Web_header_registrado.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa();
+        });
+
+    fetch("Web_footer.html")
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("footer").innerHTML = html;
+        });
+
+</script>
+</body>
+</html>
