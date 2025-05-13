@@ -4,114 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos profesor | Módulo</title>
-
     <link rel="stylesheet" href="../css/libro_de_estilos.css">
-    <link rel="stylesheet" href="../css/Modulo_recursos_profesor.css">
     <link rel="stylesheet" href="../css/Modulo_header_asignaturas.css">
     <link rel="stylesheet" href="../css/Modulo_footer.css">
-
+    <link rel="stylesheet" href="../css/Modulo_recursos_profesor.css">
 </head>
 <body>
-
 <!-- Apartado del header -->
 <div id="header"></div>
 
 <main>
-    <aside class="asignaturas">
-
-    </aside>
+    <aside class="asignaturas"></aside>
     <div class="contenedor_pagina">
-        <!-- Contenido de la página -->
-        <h2 id="recursos">Recursos:</h2>
         <div class="contenedor_ruta">
-
-            <div class="contenedor_ruta_boton">
-                <h3>Ruta: <span id="cambio">Ejercicios-Ejemplos/JavaScript/</span></h3>
-
-                <button class="btn-azul-claro"> <img src="" alt=""> </button>
+            <h2>Ruta: <span id="cambio">Ejercicios-Ejemplos/JavaScript/</span></h2>
+            <div class="contenedo_botones">
+                <button class="btn-azul-claro btn-descargar">Descargar archivos</button>
+                <button class="btn-azul-claro btn-añadirRecurso" id="btnAñadirRecurso">
+                    <img src="../../../images/iconos/icono_añadir_sumar.png" alt="Icono de añadir">
+                </button>
             </div>
-
-
-            <button class="btn-azul-claro"> <img src="" alt=""> </button>
         </div>
 
-
-        <table>
+        <table id="tablaRecursos">
+            <thead>
             <tr>
                 <th>
-                    <button class="btn-azul-claro"><img src="" alt=""></button>
-
+                    <label class="checkbox-con-imagen">
+                        <input type="checkbox" id="selectAll">
+                        <img src="../../../images/iconos/icono_tick.png" alt="Icono del tick de seleccionado">
+                    </label>
                 </th>
-                <th>
-                    <a href="#"><h3>Nombre</h3><img src="" alt=""></a>
+                <th data-sort="nombre">
+                    <a href="#" class="sortable"><h3>Nombre</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></a>
                 </th>
-                <th>
-                    <a href="#"><h3>Autor</h3><img src="" alt=""></a>
+                <th data-sort="autor">
+                    <a href="#" class="sortable"><h3>Autor</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></a>
                 </th>
-                <th>
-                    <a href="#"><h3>Fecha de publicación</h3><img src="" alt=""></a>
+                <th data-sort="fecha">
+                    <a href="#" class="sortable"><h3>Fecha de publicación</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></a>
                 </th>
-                <th>
-                    <a href="#"><h3>Tipo de archivo</h3><img src="" alt=""></a>
+                <th data-sort="tipo">
+                    <a href="#" class="sortable"><h3>Tipo de archivo</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></a>
                 </th>
+                <th></th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>
-                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <label class="checkbox-con-imagen">
+                        <input type="checkbox" class="rowCheckbox">
+                        <img src="../../../images/iconos/icono_tick.png" alt="Icono del tick de seleccionado">
+                    </label>
                 </td>
-                <td><a href="#"><img src="" alt=""><h3>Documentación_JS</h3></a></td>
+                <td><div class="nombreMasImagen"><img src="../../../images/iconos/icono_carpeta.png" alt="Icono de carpeta"><h3>Documentación_JS</h3></div></td>
                 <td><h3>Lucio</h3></td>
-                <td><h3>21/08/22</h3></td>
+                <td><h3 data-date="2022-08-21">21/08/22</h3></td>
                 <td><h3>Carpeta</h3></td>
                 <td>
-                    <button class="opciones">Opciones<img src="" alt="flecha desplegable"></button>
+                    <div class="dropdown-container">
+                        <button class="opciones"><h3>Opciones</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></button>
+                        <div class="dropdown-menu">
+                            <a href="#">Editar</a>
+                            <a href="#">Descargar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <label class="checkbox-con-imagen">
+                        <input type="checkbox" class="rowCheckbox">
+                        <img src="../../../images/iconos/icono_tick.png" alt="Icono del tick de seleccionado">
+                    </label>
                 </td>
-                <td><a href="#"><img src="" alt=""><h3>Ejemplo-Diseño.img</h3></a></td>
+                <td><div class="nombreMasImagen"><img src="../../../images/iconos/icono_fichero.png" alt="Icono de fichero"><h3>Ejemplo-Diseño.img</h3></div></td>
                 <td><h3>Lucio</h3></td>
-                <td><h3>21/08/22</h3></td>
+                <td><h3 data-date="2022-08-21">21/08/22</h3></td>
                 <td><h3>Imagen</h3></td>
                 <td>
-                    <button class="opciones">Opciones<img src="" alt="flecha desplegable"></button>
+                    <div class="dropdown-container">
+                        <button class="opciones"><h3>Opciones</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></button>
+                        <div class="dropdown-menu">
+                            <a href="#">Editar</a>
+                            <a href="#">Descargar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="btn-azul-claro"><img src="" alt=""></button>
+                    <label class="checkbox-con-imagen">
+                        <input type="checkbox" class="rowCheckbox">
+                        <img src="../../../images/iconos/icono_tick.png" alt="Icono del tick de seleccionado">
+                    </label>
                 </td>
-                <td><a href="#"><img src="" alt=""><h3>Prueba.txt</h3></a></td>
+                <td><div class="nombreMasImagen"><img src="../../../images/iconos/icono_fichero.png" alt="Icono de fichero"><h3>Prueba.txt</h3></div></td>
                 <td><h3>Lucio</h3></td>
-                <td><h3>21/08/22</h3></td>
+                <td><h3 data-date="2022-08-22">22/08/22</h3></td>
                 <td><h3>Documento de texto</h3></td>
                 <td>
-                    <button class="opciones">Opciones<img src="" alt="flecha desplegable"></button>
+                    <div class="dropdown-container">
+                        <button class="opciones"><h3>Opciones</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt="Icono de la flecha desplegable"></button>
+                        <div class="dropdown-menu">
+                            <a href="#">Editar</a>
+                            <a href="#">Descargar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
-
+            </tbody>
         </table>
     </div>
 </main>
 
+<!-- Modal para añadir recurso -->
+<div id="modalAñadirRecurso" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Añadir nuevo recurso</h2>
+        <form id="formAñadirRecurso">
+            <div class="form-group">
+                <label for="nombreRecurso"><p>Nombre del recurso:</p></label>
+                <input type="text" id="nombreRecurso" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoRecurso"><p>Tipo de recurso:</p></label>
+                <select id="tipoRecurso" required>
+                    <option value=""><p>Seleccione un tipo</p></option>
+                    <option value="carpeta">Carpeta</option>
+                    <option value="documento">Documento</option>
+                    <option value="imagen">Imagen</option>
+                    <option value="archivo">Archivo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="archivoRecurso"><p>Subir archivo:</p></label>
+                <input type="file" id="archivoRecurso">
+            </div>
+            <button type="submit" class="btn-azul-claro">Guardar recurso</button>
+        </form>
+    </div>
+</div>
 
 <!-- Apartado del footer -->
 <div id="footer"></div>
 
-
-<script type="module">
-    // Primero importamos las funciones y datos necesarios
+<!-- Scripts -->
+<script type="module" src="../js/Modulo_recursos_profesor.js">
+    // Importar funciones del header
     import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
 
-
-    // Cargamos el HTML del header y footer
+    // Cargar header y footer
     fetch("Modulo_header_asignaturas.html")
         .then(res => res.text())
         .then(html => {
             document.getElementById("header").innerHTML = html;
-            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
+            iniciarMenuHamburguesa();
         });
 
     fetch("Modulo_footer.html")
@@ -119,8 +172,6 @@
         .then(html => {
             document.getElementById("footer").innerHTML = html;
         });
-
-
 </script>
 </body>
 </html>
