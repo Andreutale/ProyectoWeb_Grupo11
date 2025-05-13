@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo | WEB</title>
+  <link rel="stylesheet" href="../css/libro_de_estilos.css">
+  <link rel="stylesheet" href="../css/Web_header_no_registrado.css">
+  <link rel="stylesheet" href="../css/Web_footer.css">
+  <link rel="stylesheet" href="../css/Web_catalogo.css">
+
+  <script src="../js/Web_catalogo.js" defer></script>
+</head>
+<body>
+
+<div id="header"></div>
+<main>
+  <h1>Catálogo</h1>
+  <div class="contenedor_catalogo">
+    <ul>
+      <li><a href="#"><button class="btn_recursos"><div>Recursos</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_calificaciones"><div>Calificaciones</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_examenes"><div>Exámenes</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_anuncios"><div>Anuncios</div></button></a></li>
+    </ul>
+    <ul>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_tareas"><div>Tareas</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_guia_docente"><div>Guía Docente</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_foros"><div>Foros</div></button></a></li>
+      <li class="btn_inaccesible"><a href="#"><button class="btn_videoapuntes"><div>Videoapuntes</div></button></a></li>
+    </ul>
+  </div>
+</main>
+<div id="footer"></div>
+
+<script type="module">
+  // Primero importamos las funciones y datos necesarios
+  import { iniciarMenuHamburguesa } from "../js/Modulo_header.js";
+
+  // Cargamos el HTML del header y footer
+  fetch("Web_header_no_registrado.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa();
+          });
+
+  fetch("Web_footer.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("footer").innerHTML = html;
+          });
+
+</script>
+</body>
+</html>
