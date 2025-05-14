@@ -1,4 +1,3 @@
-/* Estructura global */
 html, body {
   height: 100%;
   margin: 0;
@@ -72,7 +71,6 @@ main {
   color: #000;
 }
 
-/* Responsive */
 @media (max-width: 1000px) {
   .main-container {
     padding-left: 8%;

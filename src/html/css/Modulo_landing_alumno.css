@@ -1,4 +1,3 @@
-/* Corrección global y estructura de página */
 html, body {
   height: 100%;
   margin: 0;
@@ -68,10 +67,9 @@ main {
   font-weight: 500;
   font-size: 0.95em;
   line-height: 1.3em;
-  color: #000; /* fuerza el texto en negro */
+  color: #000; 
 }
 
-/* Ajuste para móviles */
 @media (max-width: 1000px) {
   .main-container {
     padding-left: 8%;
