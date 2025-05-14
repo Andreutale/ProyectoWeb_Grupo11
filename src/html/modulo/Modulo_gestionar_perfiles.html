@@ -1,10 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gestionar perfiles | Modulo</title>
+  <link rel="stylesheet" href="../css/libro_de_estilos.css">
+  <link rel="stylesheet" href="../css/Modulo_header.css">
+  <link rel="stylesheet" href="../css/Modulo_footer.css">
+  <link rel="stylesheet" href="../css/Modulo_gestionar_perfiles.css">
 <body>
-$END$
+
+<!-- Apartado del header -->
+<div id="header"></div>
+
+
+<main>
+  <div>
+    <h1>Perfiles</h1>
+  </div>
+
+
+  <div class="buscador_gestionar_perfiles">
+    <input type="text" placeholder="Buscar usuarios...">
+    <button class="btn-azul-claro"><img src="../../../images/iconos/icono_lupa.png" alt="Icono de la lupa">  </button>
+  </div>
+
+  <div class="tabla_scrolleable">
+    <table>
+      <thead>
+        <tr>
+          <th><h3>Nombre</h3></th>
+          <th><h3>Rol</h3></th>
+          <th><h3>Correo electrónico</h3></th>
+          <th>
+            <div>
+              <button><h3>Añadir Usuario</h3></button>
+            </div>
+          </th>
+        </tr>
+      </thead>
+
+
+
+      <tbody>
+        <tr>
+          <td><h3>Carlos García Garcilaso</h3></td>
+          <td><h3>Alumno</h3></td>
+          <td><h3>carlosgarcia@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3>Raúl Sanabria Salamanca</h3></td>
+          <td><h3>Alumno</h3></td>
+          <td><h3>raúlsanabria@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3>Ferran Sansaloni Simisage</h3></td>
+          <td><h3>PAS</h3></td>
+          <td><h3>ferransansaloni@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3>Javier Acevedo Azerbayán</h3></td>
+          <td><h3>Profesor</h3></td>
+          <td><h3>javieracevedo@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3>Andreu Aliaga Raja</h3></td>
+          <td><h3>Alumno</h3></td>
+          <td><h3>andreualaga@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3>David Ferra Zorrilla</h3></td>
+          <td><h3>Profesor</h3></td>
+          <td><h3>davidferra@correo.com</h3></td>
+          <td>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+          </td>
+        </tr>
+      </tbody>
+
+
+
+    </table>
+  </div>
+</main>
+
+
+<!-- Apartado del footer -->
+<div id="footer"></div>
+
+<!-- Scripts -->
+<script type="module">
+  // Primero importamos las funciones y datos necesarios
+  import { iniciarMenuHamburguesa } from '../js/Modulo_header.js';
+  import { usuarios } from '../../app/usuarios.js';
+
+  // Cargamos el HTML del header y footer
+  fetch("Modulo_header_sin_ola.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("header").innerHTML = html;
+            iniciarMenuHamburguesa(); // Aquí activamos el menú hamburguesa
+          });
+
+  fetch("Modulo_footer.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("footer").innerHTML = html;
+          });
+
+  // Si necesitas acceder a los usuarios en algún momento, ya puedes hacerlo
+  console.log("Usuarios cargados:", usuarios);
+</script>
+
+
+
 </body>
 </html>
+
