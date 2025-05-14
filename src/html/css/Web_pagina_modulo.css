@@ -20,26 +20,6 @@ h1 {
     margin: 0 2em ;
 }
 
-.carrusel {
-    display: flex;
-    width: 90%;
-}
-
-.carrusel img {
-    margin: 1em;
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: 1s ease;
-}
-
-.carrusel img:hover {
-    cursor: crosshair;
-    width: 100%;
-    opacity: 1;
-}
-
 /*CREDENCIALES NECESARIAS PARA USAR EL MÓDULO + DEMO Y COMPRAR*/
 .datos_demo {
     margin: 0 2em;
