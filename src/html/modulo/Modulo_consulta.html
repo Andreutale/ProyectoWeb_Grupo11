@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="../css/Modulo_consulta.css" />
   <link rel="stylesheet" href="../css/Modulo_header.css" />
   <link rel="stylesheet" href="../css/Modulo_footer.css" />
-  <link rel="stylesheet" href="../css/libro_de_estilos.css" />
   <script src="../js/Modulo_header.js" defer></script>
 </head>
 <body>
 
+<!-- Header -->
 <div class="header-container">
   <header>
     <a href="#"><img class="logo" src="../../../images/logo_modulo.png" alt="Logo del apartado de modulo"></a>
@@ -31,48 +31,48 @@
   </header>
 </div>
 
-<main class="main-content">
-  <section class="consulta-section">
-    <h1 class="consulta-titulo">Consultas</h1>
-    <div class="consulta-container">
-      <form class="consulta-form">
-        <div class="form-left">
-          <div class="input-group">
-            <label for="correo">Correo *</label>
-            <input type="email" id="correo" name="correo" required />
-          </div>
-
-          <div class="input-group">
-            <label for="tipo">Tipo *</label>
-            <select id="tipo" name="tipo" required>
-              <option value="inicio">Error en el inicio de sesión</option>
-              <option value="acceso">Problema con acceso a materiales</option>
-              <option value="email">No recibo correos institucionales</option>
-              <option value="otro">Otro problema técnico</option>
-            </select>
-          </div>
-
-          <div class="input-group">
-            <label for="archivo">Adjuntos</label>
-            <input type="file" id="archivo" name="archivo" />
-          </div>
+<!-- Contenido principal -->
+<main class="main-container">
+  <h1 class="consulta-titulo">Consultas</h1>
+  <div class="consulta-container">
+    <form class="consulta-form">
+      <div class="form-left">
+        <div class="input-group">
+          <label for="correo">Correo *</label>
+          <input type="email" id="correo" name="correo" required />
         </div>
 
-        <div class="form-right">
-          <div class="input-group">
-            <label for="descripcion">Descripción *</label>
-            <textarea id="descripcion" name="descripcion" required></textarea>
-          </div>
+        <div class="input-group">
+          <label for="tipo">Tipo *</label>
+          <select id="tipo" name="tipo" required>
+            <option value="inicio">Error en el inicio de sesión</option>
+            <option value="acceso">Problema con acceso a materiales</option>
+            <option value="email">No recibo correos institucionales</option>
+            <option value="otro">Otro problema técnico</option>
+          </select>
         </div>
 
-        <div class="form-submit">
-          <button type="submit">Enviar consulta</button>
+        <div class="input-group">
+          <label for="archivo">Adjuntos</label>
+          <input type="file" id="archivo" name="archivo" />
         </div>
-      </form>
-    </div>
-  </section>
+      </div>
+
+      <div class="form-right">
+        <div class="input-group">
+          <label for="descripcion">Descripción *</label>
+          <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit">Enviar consulta</button>
+      </div>
+    </form>
+  </div>
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-content">
     <p>GTI 2025 &copy;</p>
