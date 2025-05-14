@@ -1,21 +1,12 @@
-/* ESTILOS BASE */
-main {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 120px);
-}
-
 .asignaturas {
+    position: relative;
     width: 250px;
     min-width: 250px;
     background-color: var(--azul-muy-claro);
     border-right: 2px solid var(--azul-oscuro);
-    position: sticky;
     top: 0;
-    align-self: flex-start;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 130px);
     overflow-y: auto;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -23,7 +14,17 @@ main {
     gap: 30px;
 }
 
-.asignaturas div {
+.asignaturas img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 20px;
+    right: 20px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.asignaturas .btn-azul-claro {
     width: 90%;
     height: auto;
     padding: 5px 0;
@@ -45,6 +46,43 @@ main {
     overflow: visible; /* Permite que el dropdown se muestre fuera */
 }
 
+.contenedor_imagen {
+    display: flex;
+}
+
+.asignaturas-lista {
+    margin: 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.asignatura-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.asignatura-item h3 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+}
+
+
+
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -58,7 +96,6 @@ table tr th {
     color: white;
     padding: 15px 10px;
     text-align: left;
-    text-transform: uppercase;
     border-bottom: 2px solid black;
     vertical-align: middle;
     height: 60px;

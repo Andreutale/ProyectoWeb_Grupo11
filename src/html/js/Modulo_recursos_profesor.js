@@ -171,11 +171,46 @@ async function loadHeaderAndFooter() {
     }
 }
 
-// Inicializar todo cuando el DOM esté listo
+// Modal para gestionar asignaturas favoritas
+function setupAsignaturasModal() {
+    const modal = document.getElementById('modalAsignaturasFavoritas');
+    if (!modal) return;
+
+    const btnOpen = document.getElementById('img_puntos_suspensivos');
+    const btnClose = modal.querySelector('.close-modal');
+    const btnGuardar = document.getElementById('btnGuardarAsignaturas');
+
+    // Abrir modal al hacer clic en los tres puntos
+    btnOpen.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'block';
+    });
+
+    // Cerrar modal
+    btnClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Guardar cambios (simplemente cierra el modal)
+    btnGuardar.addEventListener('click', () => {
+        alert("Asignaturas modificadas")
+        modal.style.display = 'none';
+    });
+
+    // Cerrar al hacer clic fuera del modal
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+
+// Modifica el DOMContentLoaded para incluir la nueva función
 document.addEventListener('DOMContentLoaded', () => {
     setupSelectAllCheckbox();
     setupColumnSorting();
     setupDropdownMenus();
     setupResourceModal();
+    setupAsignaturasModal();
     loadHeaderAndFooter();
 });
