@@ -1,0 +1,79 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 1em auto;
+}
+
+.contenedor_global {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*FOTOS VISTA PREVIA DEL MÓDULO*/
+.contenedor_img {
+    width: 100%;
+    margin: 0 2em ;
+}
+
+/*CREDENCIALES NECESARIAS PARA USAR EL MÓDULO + DEMO Y COMPRAR*/
+.datos_demo {
+    margin: 0 2em;
+}
+
+.credenciales {
+    background-color: var(--azul-no-tan-verdoso);
+    border-radius: 20px;
+    padding: 1em 3em;
+    margin-bottom: .75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separador li:last-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.credenciales li {
+    list-style: none;
+}
+
+p {
+    color: black;
+}
+
+.subrallado {
+    text-decoration: underline;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.botones_datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones_datos button {
+    margin: .25em 0;
+}
+
+.btn-azul-verdoso p {
+    color: white;
+}
+
+
+/*DESCRIPCIÓN DEL MÓDULO*/
+.descripcion {
+    background-color: var(--gris-claro);
+    border-radius: 20px;
+    padding: 1em 3em;
+    margin: 0 2em;
+}

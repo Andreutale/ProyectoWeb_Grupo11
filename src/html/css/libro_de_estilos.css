@@ -29,6 +29,7 @@ main {
 }
 
 
+
 /* -------------------------------------------- */
 /* Libro de estilo para el módulo Y la web */
 /* -------------------------------------------- */
@@ -46,6 +47,7 @@ main {
 
     /* Colores de la web */
     --azul-verdoso: #225560;
+    --azul-no-tan-verdoso: #B9CDD1;
     --gris-claro: #D9D9D9;
     --gris-oscuro: #3B3939;
 }
@@ -114,6 +116,7 @@ h2 {
     font-family: "Assistant", sans-serif;
     font-weight: 600;
     font-size: 24px;
+    font-weight: bold;
 }
 
 h3 {
