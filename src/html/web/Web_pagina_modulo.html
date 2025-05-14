@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/Web_pagina_modulo.css">
 </head>
 <body>
-
+<!-- HEADER -->
 <div id="header"></div>
 <main>
     <h1>RECURSOS</h1>
@@ -18,23 +18,38 @@
 
         <!-- FOTOS VISTA PREVIA DEL MÓDULO -->
         <div class="contenedor_img">
-            <section>
-                <img src="../../../images/vista_previa1.png">
-                <img src="../../../images/vista_previa2.png">
-                <img src="../../../images/vista_previa3.png">
-                <img src="../../../images/vista_previa4.png">
-            </section>
-            <section>
-                <img src="../../../images/vista_previa5.png">
-                <img src="../../../images/vista_previa6.png">
-                <img src="../../../images/vista_previa7.png">
-                <img src="../../../images/vista_previa8.png">
-            </section>
+            <h2>Vista previa</h2>
+                <div>
+                    <img src="../../../images/vista_previa1.png" alt="Vista previa 1">
+                    <img src="../../../images/vista_previa2.png" alt="Vista previa 2">
+                    <img src="../../../images/vista_previa3.png" alt="Vista previa 3">
+                </div>
+                <div>
+                    <img src="../../../images/vista_previa4.png" alt="Vista previa 4">
+                    <img src="../../../images/vista_previa5.png" alt="Vista previa 5">
+                    <img src="../../../images/vista_previa6.png" alt="Vista previa 6">
+                </div>
+                <div>
+                    <img src="../../../images/vista_previa7.png" alt="Vista previa 7">
+                    <img src="../../../images/vista_previa8.png" alt="Vista previa 8">
+                    <img src="../../../images/vista_previa9.png" alt="Vista previa 9">
+                </div>
+                <div>
+                    <img src="../../../images/vista_previa10.png" alt="Vista previa 10">
+                    <img src="../../../images/vista_previa11.png" alt="Vista previa 11">
+                </div>
+        </div>
+
+        <!-- CONTENEDOR POP-UP -->
+        <div id="popup" class="popup">
+            <span class="close">&times;</span>
+            <img class="popup-content" id="popup-img">
         </div>
 
         <!-- CREDENCIALES NECESARIAS PARA USAR EL MÓDULO + DEMO Y COMPRAR -->
         <div class="datos_demo">
             <div class="credenciales">
+                <!-- USUARIO 1 -->
                 <h3 class="subrallado negrita">Usuario 1</h3>
                 <ul class="separador">
                     <li><p class="negrita">Correo:</p>
@@ -45,6 +60,7 @@
                     </li>
                 </ul>
                 </br>
+                <!-- USUARIO 2 -->
                 <h3 class="subrallado negrita">Usuario 2</h3>
                 <ul>
                     <li><p class="negrita">Correo:</p>
@@ -78,8 +94,16 @@
             </ul>
         </div>
     </div>
+
 </main>
+
+<!-- FOOTER -->
 <div id="footer"></div>
+
+<!-- SCRIPT POP-UP-->
+<script src="../js/Web_pagina_modulo.js"></script>
+
+<!-- SCRIPTS GENERALES -->
 <script type="module">
     // Primero importamos las funciones y datos necesarios
     import { iniciarMenuHamburguesa } from "../js/Modulo_header.js";
@@ -97,7 +121,6 @@
         .then(html => {
             document.getElementById("footer").innerHTML = html;
         });
-
 </script>
 </body>
 </html>
