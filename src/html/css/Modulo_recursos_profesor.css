@@ -360,3 +360,14 @@ th.asc .flecha_desplegable {
 th.desc .flecha_desplegable {
     transform: rotate(0deg);
 }
+
+
+@media(max-width: 1230px) {
+    .datos_responsive {
+        display: none;
+    }
+}
+
+@media(max-width: 1030px) {
+
+}
