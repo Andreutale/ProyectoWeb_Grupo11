@@ -116,3 +116,29 @@ button:hover {
     width: 100%;
   }
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+#popup-exito .popup-contenido p {
+  color: black;
+}
+
+.popup-contenido {
+  background-color: white !important;
+  color: black !important;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2em;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
