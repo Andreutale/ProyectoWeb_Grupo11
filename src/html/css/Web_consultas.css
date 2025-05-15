@@ -131,3 +131,46 @@ body {
     z-index: -1;
   }
   
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-contenido {
+  background-color: white;
+  color: black; /* texto negro */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2em;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+#popup-exito .popup-contenido p {
+  color: black;
+}
+
+.popup-contenido p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#cerrar-popup {
+  background-color: #1e5a61;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cerrar-popup:hover {
+  background-color: #16474d;
+}

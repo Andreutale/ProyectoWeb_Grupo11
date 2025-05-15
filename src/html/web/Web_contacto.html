@@ -83,13 +83,32 @@
     </div>
   </footer>
 
-  <!-- JS -->
-  <script type="module">
-    import { iniciarMenuHamburguesa } from '../js/Modulo_header.js'
-    iniciarMenuHamburguesa();
-  </script>
+<script type="module">
+  import { iniciarMenuHamburguesa } from '../js/Modulo_header.js'
+  iniciarMenuHamburguesa();
 
-  <!-- Fondo -->
+  const formulario = document.querySelector('.consulta-form');
+  const popup = document.getElementById('popup-exito');
+
+  formulario.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+    formulario.reset();
+
+    popup.style.display = 'flex'; 
+
+    setTimeout(() => {
+      popup.style.display = 'none'
+    }, 3000);
+  });
+</script>
+
   <img class="fondo_contacto" src="../../../images/fondoContacto.png" alt="Fondo de la sección de consulta">
+
+<div id="popup-exito" class="popup">
+  <div class="popup-contenido">
+    <p>Su consulta ha sido enviada con éxito</p>
+  </div>
+</div>
+
 </body>
 </html>
