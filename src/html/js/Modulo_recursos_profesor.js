@@ -205,6 +205,77 @@ function setupAsignaturasModal() {
     });
 }
 
+function setupResponsiveDropdowns() {
+    if (window.innerWidth > 1100) {
+        // Eliminar cualquier panel de información si estamos en desktop
+        document.querySelectorAll('.responsive-info').forEach(panel => panel.remove());
+        return;
+    }
+
+    document.querySelectorAll('.btn-desplegable-responsive').forEach(btn => {
+        // Verificar si ya tiene un evento click
+        if (btn.hasAttribute('data-responsive-bound')) return;
+        btn.setAttribute('data-responsive-bound', 'true');
+
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const row = this.closest('tr');
+            const tbody = row.parentNode;
+            const rowIndex = Array.from(tbody.children).indexOf(row);
+
+            // Buscar si ya existe un panel de información para esta fila
+            let infoPanel = row.nextElementSibling;
+
+            if (infoPanel && infoPanel.classList.contains('responsive-info')) {
+                // Si ya existe, solo alternar su visibilidad
+                infoPanel.classList.toggle('active');
+                this.classList.toggle('active');
+                return;
+            }
+
+            // Obtener los datos de las celdas ocultas
+            const autor = row.cells[2].textContent.trim();
+            const fecha = row.cells[3].textContent.trim();
+            const tipo = row.cells[4].textContent.trim();
+
+            // Crear nueva fila para la información
+            infoPanel = document.createElement('tr');
+            infoPanel.className = 'responsive-info';
+            infoPanel.innerHTML = `
+                <td colspan="7">
+                    <div class="responsive-info-content">
+                        <div class="responsive-info-item">
+                            <span class="responsive-info-label">Autor:</span>
+                            <span class="responsive-info-value">${autor}</span>
+                        </div>
+                        <div class="responsive-info-item">
+                            <span class="responsive-info-label">Fecha:</span>
+                            <span class="responsive-info-value">${fecha}</span>
+                        </div>
+                        <div class="responsive-info-item">
+                            <span class="responsive-info-label">Tipo:</span>
+                            <span class="responsive-info-value">${tipo}</span>
+                        </div>
+                    </div>
+                </td>
+            `;
+
+            // Insertar después de la fila actual
+            tbody.insertBefore(infoPanel, row.nextSibling);
+            infoPanel.classList.add('active');
+            this.classList.add('active');
+        });
+    });
+}
+
+function setupAsignaturasTooltips() {
+    document.querySelectorAll('.asignaturas .btn-azul-claro h3').forEach(h3 => {
+        if (h3.textContent.length > 200) {
+            h3.parentElement.setAttribute('title', h3.textContent);
+        }
+    });
+}
+
 // Modifica el DOMContentLoaded para incluir la nueva función
 document.addEventListener('DOMContentLoaded', () => {
     setupSelectAllCheckbox();
@@ -213,4 +284,23 @@ document.addEventListener('DOMContentLoaded', () => {
     setupResourceModal();
     setupAsignaturasModal();
     loadHeaderAndFooter();
+    setupResponsiveDropdowns();
+    setupAsignaturasTooltips();
 });
+
+// Manejar cambios de tamaño de pantalla
+window.addEventListener('resize', debounce(() => {
+    setupResponsiveDropdowns();
+}, 250));
+
+// Función debounce para mejorar el rendimiento
+function debounce(func, wait) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func.apply(context, args);
+        }, wait);
+    };
+}
