@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/Modulo_header.css">
   <link rel="stylesheet" href="../css/Modulo_footer.css">
   <link rel="stylesheet" href="../css/Modulo_gestionar_perfiles.css">
+    <script src="../js/Modulo_gestionar_perfiles.js" defer></script>
 <body>
 
 <!-- Apartado del header -->
@@ -28,15 +29,15 @@
   </div>
 
   <div class="tabla_scrolleable">
-    <table>
+    <table id="tablaRecursos">
       <thead>
         <tr>
-          <th><h3>Nombre</h3></th>
-          <th><h3>Rol</h3></th>
-          <th><h3>Correo electrónico</h3></th>
+          <th><a href="#" class="sortable"><h3>Nombre</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
+          <th><a href="#" class="sortable"><h3>Rol</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
+          <th><a href="#" class="sortable"><h3>Correo <span class="datos_responsive">electrónico</span></h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
           <th>
             <div>
-              <button><h3>Añadir Usuario</h3></button>
+              <button><h3>Añadir <span class="datos_responsive">Usuario</span></h3></button>
             </div>
           </th>
         </tr>
