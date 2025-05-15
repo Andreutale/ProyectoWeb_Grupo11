@@ -1,20 +1,39 @@
-/* ESTILOS BASE */
-main {
-    display: flex;
-    width: 100%;
-    min-height: calc(100vh - 120px);
-}
-
 .asignaturas {
+    position: relative;
     width: 250px;
     min-width: 250px;
     background-color: var(--azul-muy-claro);
     border-right: 2px solid var(--azul-oscuro);
-    position: sticky;
     top: 0;
-    align-self: flex-start;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 130px);
     overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+    gap: 30px;
+}
+
+.asignaturas img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    bottom: 20px;
+    right: 20px;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.asignaturas .btn-azul-claro {
+    width: 90%;
+    height: auto;
+    padding: 5px 0;
+    text-align: center;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.asignaturas div h3 {
+    padding: 3px;
 }
 
 .contenedor_pagina {
@@ -26,6 +45,43 @@ main {
     z-index: 1;
     overflow: visible; /* Permite que el dropdown se muestre fuera */
 }
+
+.contenedor_imagen {
+    display: flex;
+}
+
+.asignaturas-lista {
+    margin: 20px 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.asignatura-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.asignatura-item h3 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+}
+
+
 
 table {
     border-collapse: separate;
@@ -40,7 +96,6 @@ table tr th {
     color: white;
     padding: 15px 10px;
     text-align: left;
-    text-transform: uppercase;
     border-bottom: 2px solid black;
     vertical-align: middle;
     height: 60px;
@@ -58,11 +113,15 @@ table tr {
 }
 
 table tr:nth-child(even) {
-    background-color: var(--azul-muy-claro);
+    background-color: white;
 }
 
 table tr:nth-child(odd) {
-    background-color: white;
+    background-color: var(--azul-muy-claro);
+}
+
+tr {
+    border-bottom: 10px solid var(--azul-muy-oscuro);
 }
 
 table td {
@@ -265,7 +324,7 @@ table td img {
     top: 15px;
     font-size: 28px;
     font-weight: bold;
-    color: #aaa;
+    color: var(--gris-claro);
     cursor: pointer;
 }
 
@@ -289,9 +348,8 @@ table td img {
 .form-group input[type="file"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gris-claro);
     border-radius: 6px;
-    font-size: 16px;
 }
 
 /* Indicadores de ordenación */
