@@ -73,7 +73,7 @@ body {
     border-radius: 12px;
     font-size: 1em;
     cursor: pointer;
-    width: 100%; /* por defecto ocupa el ancho completo */
+    width: 100%; 
   }
   
   .consulta-form button:hover {
@@ -112,16 +112,24 @@ body {
       margin: 16px auto 0 auto;
     }
   }
+.consulta-subtitulo {
+  text-align: center;
+  font-weight:500;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
 
   @media (min-width: 600px) {
-    .consulta-section {
-        padding-left: 15%;
-        padding-right: 15%;
+    .consulta-section,
+    .consulta-titulo,
+  .consulta-subtitulo {
+            text-align: left;
+
       }
   
 }
 
-.fondo_consulta {
+.fondo_contacto {
     position: fixed;
     top: 0;
     left: 0;
@@ -131,7 +139,7 @@ body {
     z-index: -1;
   }
   
-.popup {
+  .popup {
   display: none;
   position: fixed;
   top: 0;
@@ -143,34 +151,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+#popup-exito .popup-contenido p {
+  color: black;
+}
 
 .popup-contenido {
-  background-color: white;
-  color: black; /* texto negro */
+  background-color: white !important;
+  color: black !important;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
   font-size: 1.2em;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-#popup-exito .popup-contenido p {
-  color: black;
-}
-
-.popup-contenido p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-#cerrar-popup {
-  background-color: #1e5a61;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#cerrar-popup:hover {
-  background-color: #16474d;
 }

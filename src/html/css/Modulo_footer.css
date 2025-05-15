@@ -9,10 +9,11 @@ html, body {
     margin-top: auto;
     position: relative;
     width: 100%;
+    z-index: 999;
 }
 
 footer {
-    background-color: #358BC9;
+    background-color: var(--gris-oscuro);
     width: 100%;
     height: 60px;
     display: flex;
@@ -20,17 +21,37 @@ footer {
     align-items: center;
 }
 
-.ola_azul_claro {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    width: 300px;
-    height: auto;
-    max-width: 100%;
+p{
+    color: #EBEBEB;
 }
 
-@media(max-width: 768px) {
-    .ola_azul_claro {
-        display: none;
-    }
-}
+.footer {
+    background-color: #358BC9;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
