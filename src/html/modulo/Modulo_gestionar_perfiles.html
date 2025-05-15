@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/Modulo_header.css">
   <link rel="stylesheet" href="../css/Modulo_footer.css">
   <link rel="stylesheet" href="../css/Modulo_gestionar_perfiles.css">
+    <script src="../js/Modulo_gestionar_perfiles.js" defer></script>
 <body>
 
 <!-- Apartado del header -->
@@ -23,17 +24,17 @@
 
 
   <div class="buscador_gestionar_perfiles">
-    <input type="text" placeholder="Buscar usuarios...">
-    <button class="btn-azul-claro"><img src="../../../images/iconos/icono_lupa.png" alt="Icono de la lupa">  </button>
+    <input id="Input_buscador" type="text" placeholder="Buscar usuarios...">
+    <button id="Icono_buscador" class="btn-azul-claro"><img src="../../../images/iconos/icono_lupa.png" alt="Icono de la lupa">  </button>
   </div>
 
   <div class="tabla_scrolleable">
-    <table>
+    <table id="tablaRecursos">
       <thead>
         <tr>
-          <th><h3>Nombre</h3></th>
-          <th><h3>Rol</h3></th>
-          <th><h3>Correo electrónico</h3></th>
+          <th><a href="#" class="sortable"><h3>Nombre</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
+          <th><a href="#" class="sortable"><h3>Rol</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
+          <th><a href="#" class="sortable"><h3>Correo electrónico</h3><img class="flecha_desplegable" src="../../../images/iconos/icono_flecha_desplegable.png" alt=""></a></th>
           <th>
             <div>
               <button><h3>Añadir Usuario</h3></button>
@@ -50,8 +51,8 @@
           <td><h3>Alumno</h3></td>
           <td><h3>carlosgarcia@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt="Icono de la papelera"></button>
           </td>
         </tr>
 
@@ -60,8 +61,8 @@
           <td><h3>Alumno</h3></td>
           <td><h3>raúlsanabria@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
           </td>
         </tr>
 
@@ -70,8 +71,8 @@
           <td><h3>PAS</h3></td>
           <td><h3>ferransansaloni@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
           </td>
         </tr>
 
@@ -80,8 +81,8 @@
           <td><h3>Profesor</h3></td>
           <td><h3>javieracevedo@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
           </td>
         </tr>
 
@@ -90,8 +91,8 @@
           <td><h3>Alumno</h3></td>
           <td><h3>andreualaga@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
           </td>
         </tr>
 
@@ -100,8 +101,8 @@
           <td><h3>Profesor</h3></td>
           <td><h3>davidferra@correo.com</h3></td>
           <td>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_ojo.png" alt=""></button>
-            <button class="botones_gestionar_perfiles"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
+            <button class="botones_gestionar_perfiles"><a href="Modulo_visualizar_usuario.html"><img src="../../../images/iconos/icono_ojo.png" alt="Icono de visualizar usuario"></a></button>
+            <button class="botones_gestionar_perfiles boton_papelera"><img src="../../../images/iconos/icono_papelera.png" alt=""></button>
           </td>
         </tr>
       </tbody>

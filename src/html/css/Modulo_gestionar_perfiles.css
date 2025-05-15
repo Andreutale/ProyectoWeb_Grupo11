@@ -129,3 +129,50 @@ table td:last-child {
 }
 
 
+.flecha_desplegable {
+    height: 16px;
+    width: 16px;
+    transition: transform 0.2s ease;
+}
+
+th.asc .flecha_desplegable {
+    transform: rotate(180deg);
+}
+
+th.desc .flecha_desplegable {
+    transform: rotate(0deg);
+}
+
+
+/*responsive*/
+@media (max-width: 900px) {
+    /* para quitar los encabezados de correo y rol*/
+    #tablaRecursos thead th:nth-child(2),
+    #tablaRecursos thead th:nth-child(3),
+
+
+        /* para quitar las columnas de correo y rol */
+    #tablaRecursos tbody td:nth-child(2),
+    #tablaRecursos tbody td:nth-child(3) {
+        display: none ;
+    }
+
+    .buscador_gestionar_perfiles {
+        width: 60%;
+    }
+
+    .buscador_gestionar_perfiles input {
+        width: 100%
+    }
+
+
+    table th div button {
+        background-color: var(--azul-claro);
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+
+}
