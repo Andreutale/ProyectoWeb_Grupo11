@@ -1,3 +1,7 @@
+ const buscador = document.getElementById("Input_buscador")
+ const btn_buscador = document.getElementById("Icono_buscador")
+ const btn_eliminar = document.querySelectorAll(".boton_papelera")
+
 function setupColumnSorting() {
     document.querySelectorAll('.sortable').forEach(header => {
         header.addEventListener('click', function(e) {
@@ -45,4 +49,23 @@ function setupColumnSorting() {
 // Modifica el DOMContentLoaded para incluir la nueva función
 document.addEventListener('DOMContentLoaded', () => {
     setupColumnSorting();
+
+
+    btn_buscador.addEventListener("click", () => {
+        var contenido_input = buscador.value;
+        if(contenido_input === ""){
+            alert("Usuario/s no encontrado")
+        }
+        alert("Usuarios encontrados")
+    })
+
+    btn_eliminar.forEach(elemento => {
+        // Agregar el evento de clic a cada elemento
+        elemento.addEventListener("click", function() {
+            // Código a ejecutar cuando se hace clic en el elemento
+            alert("Usuario eliminado")
+        });
+    });
 });
+
+
